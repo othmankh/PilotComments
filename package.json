@@ -4,7 +4,7 @@
   "description": "Google Yeoman Angular Material Generator",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
+    "start": "node heroku-web.js",
     "gulp": "gulp",
     "build": "gulp sass",
     "test": "spec"
