@@ -1,0 +1,90 @@
+<div ng-controller="CommentsController as cmtCtrl">
+   <md-button class="md-fab md-mini add-icon-style" aria-label="Eat cake" id="addComment" ng-click="cmtCtrl.AddComment($event)">
+      <md-icon aria-label="Menu" class="material-icons" >add</md-icon>
+   </md-button>
+   <div flex layout="row" class="comments-div">
+      <md-content layout-fill flex class="md-padding page-content">
+      <h2>Comments List</h2>
+      <div class="comments-body-div">
+         <form ng-submit="cmtCtrl.Search(searchType)" name="userForm" >
+            <md-input-container class="md-block">
+               <label>Search Comment</label>
+               <input ng-model="searchText">
+            </md-input-container>
+
+            <section layout="row" layout-sm="column" layout-align="top center" layout-wrap>
+             <label class="search-comment-label">Search By Id</label>
+             <md-switch ng-model="searchType"  class="md-primary md-invert" md-no-ink aria-label="Switch No Ink" ng-change="cmtCtrl.onChange(searchType)">
+                Search by Email
+             </md-switch>
+           </section>
+         </form>
+      </div>
+
+      <div ng-repeat="cmt in comments" >
+         <h1>Comment: {{cmt.id}} </h1>
+         <div class="comments-body-div">
+            <div style="display:block;">
+               <div class="comment-body" style="display:inline-block; max-width: 85%; min-width: 85%">
+                  {{cmt.body}}
+               </div>
+               <div style="display: inline-block;">
+                  <md-button id="addComment" ng-click="cmtCtrl.showAdvanced($event, cmt)">
+                     <md-icon aria-label="Menu" class="material-icons" >edit</md-icon>
+                  </md-button>
+                  <md-button  id="addComment" ng-click="cmtCtrl.Delete(cmt)">
+                     <md-icon aria-label="Menu" class="material-icons" >delete</md-icon>
+                  </md-button>
+               </div>
+            </div>
+            <div class=" email-div" >
+               {{cmt.email}}
+            </div>
+         </div>
+      </div>
+      <script type="text/ng-template" id="dialog1.tmpl.html">
+         <md-dialog aria-label="Dialog">
+           <form ng-cloak>
+             <md-toolbar>
+               <div class="md-toolbar-tools">
+                 <h2>{{ctrl.DialogTitle}}<h2>
+                 <span flex></span>
+                 <md-button class="md-icon-button" ng-click="ctrl.cancel()">
+                   <md-icon aria-label="Menu" class="material-icons" >close</md-icon>
+                 </md-button>
+               </div>
+             </md-toolbar>
+         
+             <md-dialog-content>
+               <div class="md-dialog-content">
+         
+                <form ng-submit="cmtCtrl.Search()" name="userForm" >
+                 <md-input-container class="md-block" >
+                   <label>Comment name </label>
+                     <input type="text" ng-model="ctrl.dialog.name" >
+                 </md-input-container>
+         
+                 <md-input-container class="md-block">
+                   <label>Comment body </label>
+                     <input type="text" ng-model="ctrl.dialog.body" >
+                 </md-input-container>
+         
+                 <md-input-container class="md-block">
+                   <label>Comment email </label>
+                     <input type="text" ng-model="ctrl.dialog.email" >
+                 </md-input-container>
+               </form>
+         
+             </md-dialog-content>
+         
+             <md-dialog-actions layout="row">
+               <md-button ng-click="ctrl.answer(ctrl.Action)" class="md-raised md-warn">
+                 Done
+               </md-button>
+             </md-dialog-actions>
+           </form>
+         </md-dialog>
+      </script>
+   </div>
+</div>
+<!-- md-theme="lime" md-theme-watch="true" -->

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Comments</title>
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="/public/css/app.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body ng-app="Pilot" ng-cloak>   
+    <div class="top-header">
+        <p class="top-text-color">Comments View</p>
+    </div>
+
+    <div ng-controller="CommentsController as cmtCtrl">
+        <md-button class="md-fab md-mini add-icon-style" aria-label="Eat cake" id="addComment" ng-click="cmtCtrl.AddComment($event)">
+            <md-icon aria-label="Menu" class="material-icons" >add</md-icon>
+        </md-button>
+    </div>
+    <div ui-view></div>
+
+    <!-- inject:js -->
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-material/angular-material.min.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="/bower_components/angular-ui-router/angular-ui-router.min.js"></script>
+    <script src="/public/js/config/app.js"></script>
+    <script src="/public/js/controllers/comments-controller.js"></script>
+    <script src="/public/js/controllers/home-controller.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

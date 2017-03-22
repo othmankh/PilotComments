@@ -1,0 +1,79 @@
+.text-center {
+  text-align: center; }
+
+.top-header {
+  background-color: #3f3fbd;
+  padding: 0; }
+
+.top-text-color {
+  margin-top: 0;
+  padding: 10px;
+  color: #FFFFFF; }
+
+.add-icon-style {
+  position: absolute;
+  top: 20px;
+  right: 20px; }
+
+.comments-div {
+  margin-left: 50px;
+  margin-right: 100px; }
+
+.comments-body-div {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  min-height: 100px;
+  margin: 10px;
+  display: block; }
+
+.search-comment-label {
+  margin-top: 5px;
+  padding: 5px;
+  margin-right: 3px; }
+
+md-switch.md-default-theme.md-checked.md-primary .md-thumb, md-switch.md-checked.md-primary .md-thumb {
+  background-color: white;
+  margin-left: 7px; }
+
+md-switch.md-default-theme.md-checked.md-primary .md-bar, md-switch.md-checked.md-primary .md-bar {
+  background-color: #2197ff;
+  min-height: 22px;
+  min-width: 40px; }
+
+md-switch.md-default-theme .md-bar, md-switch .md-bar {
+  min-height: 22px;
+  min-width: 40px; }
+
+.md-thumb {
+  text-align: center;
+  min-height: 20px; }
+
+md-switch .md-thumb {
+  height: 10px;
+  margin-top: 4px; }
+
+md-switch .md-label {
+  margin-top: 9px; }
+
+.comment-body {
+  margin-left: 15px;
+  margin-top: 15px;
+  font-size: 12pt;
+  color: #353535;
+  font-weight: normal; }
+
+.comments-body-div .md-button {
+  min-width: 0px; }
+
+.email-div {
+  background-color: blue;
+  max-width: 50%;
+  border-radius: 8px;
+  display: inline-block;
+  margin-left: 20px;
+  padding: 8px;
+  color: white;
+  margin-bottom: 10px; }
+
+.dialogdemoThemeInheritance .container {
+  text-align: center; }
