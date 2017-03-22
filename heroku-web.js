@@ -3,19 +3,16 @@ var app = express();
 var fs = require('fs');
 var accessLogStream = fs.createWriteStream(__dirname + '/access.log', {flags: 'a'})
 app.use(express.static(__dirname + '/dist'));
-
 app.set('view engine', 'ejs');
+var port = process.env.PORT || 8080;
 
-// make express look in the public directory for assets (css/js/img)
-app.use(express.static(__dirname + '/public'));
+app.listen(port, function() {
+	console.log('Our app is running on http://localhost:' + port);
+});
 
 // set the home page route
 app.get('/', function(req, res) {
 	res.render('index');
 });
 
-var port = process.env.PORT || 8000;
 
-app.listen(port, function() {
-	console.log('Our app is running on http://localhost:' + port);
-});
