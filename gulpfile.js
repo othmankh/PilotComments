@@ -15,6 +15,10 @@ var serve = require('gulp-serve');
 
 gulp.task('default', ['serve']);
 
+gulp.task('heroku', function(){
+	
+});
+
 gulp.task('init', ['sass', 'bower', 'js', 'uglify-js', 'image', 'image-min', 'html', 'index']);
 
 
