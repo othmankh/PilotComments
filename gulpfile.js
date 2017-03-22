@@ -17,17 +17,9 @@ gulp.task('default', ['serve']);
 
 gulp.task('init', ['sass', 'bower', 'js', 'uglify-js', 'image', 'image-min', 'html', 'index']);
 
-gulp.task('serve', serve('public'));
-gulp.task('serve-build', serve(['public', 'build']));
-gulp.task('serve-prod', serve({
-  root: ['public', 'build'],
-  port: 443,
-  https: true,
-  middleware: function(req, res) {
-    // custom optional middleware 
-  }
-}));
-
+gulp.task('heroku:production'build'], function(){
+  console.log('herokuduction');
+});
 
 // Static Server + watching js/scss/html files
 gulp.task('serve', ['init'], function() {
