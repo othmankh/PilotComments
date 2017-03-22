@@ -17,7 +17,9 @@ var runSeq = require('run-sequence')
 
 gulp.task('default', ['serve']);
 
-gulp.tasks('heroku:production', [default]);
+gulp.tasks('heroku:production', function(){
+  runSeq('clean', 'build', 'minify')
+});
 
 gulp.task('init', ['sass', 'bower', 'js', 'uglify-js', 'image', 'image-min', 'html', 'index']);
 
