@@ -12,14 +12,10 @@ var iife = require("gulp-iife");
 var cleanCSS = require('gulp-clean-css');
 var Server = require('karma').Server;
 var serve = require('gulp-serve');
-var runSeq = require('run-sequence')
-
 
 gulp.task('default', ['serve']);
 
-gulp.tasks('heroku:production', function(){
-  runSeq('clean', 'build', 'minify')
-});
+gulp.tasks('heroku:production', [default]);
 
 gulp.task('init', ['sass', 'bower', 'js', 'uglify-js', 'image', 'image-min', 'html', 'index']);
 
