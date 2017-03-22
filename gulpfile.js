@@ -15,7 +15,9 @@ var serve = require('gulp-serve');
 
 gulp.task('default', ['serve']);
 
-gulp.task('heroku:production', ['default']);
+gulp.task('heroku:production', function(){
+  console.log('herokuduction');
+});
 
 gulp.task('init', ['sass', 'bower', 'js', 'uglify-js', 'image', 'image-min', 'html', 'index']);
 
