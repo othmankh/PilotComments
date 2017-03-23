@@ -31,7 +31,7 @@
 
      var deffered =$q.defer();
 
-       $http.get('/jsonplaceholder.typicode.com/comments').then(function(data)
+       $http.post('/jsonplaceholder.typicode.com/comments').then(function(data)
        {
           $scope.comments = data.data; 
           staticArray = data.data;
