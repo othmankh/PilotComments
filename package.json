@@ -2,9 +2,9 @@
   "name": "generator-angular-material",
   "version": "1.0.0",
   "description": "Google Yeoman Angular Material Generator",
-  "main": "index.js",
+  "main": "heroku-web.js",
   "scripts": {
-    "start": "node heroku-web.js",
+  	"start": "node heroku-web.js",
     "gulp": "gulp",
     "build": "gulp sass",
     "test": "spec"
